@@ -24,6 +24,13 @@ namespace API.Entities
         public string Country { get; set; }
         public ICollection<Photo> Photos { get; set; } = new List<Photo>();
 
+        // This is the list of users that liked the currently logged in user
+        public ICollection<UserLike> LikedByUsers { get; set; }
+
+        // This is the list of users that the currently logged in user has liked
+        public ICollection<UserLike> LikedUsers { get; set; }
+
+
         /* public int GetAge()
         {
             return DateOfBirth.CalculateAge();
